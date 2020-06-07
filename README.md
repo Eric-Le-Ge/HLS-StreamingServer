@@ -1,6 +1,6 @@
 # HLS Streaming Server with Nginx
 
-This repository is designed to offer a simple and quick-to-install video streaming solution for small audiences (up to 1k clients). Upon following all the insatllation steps with your server, your will receive: 1) an rtmp link for pushing your video stream, 2) an m3u8 link that can be used to play the stream in hls format, and 3) a link to a default webpage that you can use to watch your videos directly or embed into your website as an iframe[https://en.wikipedia.org/wiki/HTML_element#Frames].
+This repository is designed to offer a simple and quick-to-install video streaming solution for small audiences (up to 1k clients). Upon following all the insatllation steps with your server, your will receive: 1) an rtmp link for pushing your video stream, 2) an m3u8 link that can be used to play the stream in hls format, and 3) a link to a default webpage that you can use to watch your videos directly or embed into your website as an [iframe](https://en.wikipedia.org/wiki/HTML_element#Frames).
 
 ## Use Case
 
