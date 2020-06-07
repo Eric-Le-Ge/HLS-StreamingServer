@@ -15,3 +15,6 @@ Additionally, you are ok with the following:
 * Supports only casual streaming with a small (less than 1k) audience size
 * Currently supports only Ubuntu/Debian Servers (works best with Ubuntu 18.04 LTS)
 
+## Installation
+
+Work in progress..
