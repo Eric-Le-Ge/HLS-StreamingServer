@@ -17,4 +17,14 @@ Additionally, you are ok with the following:
 
 ## Installation
 
-Work in progress..
+### Installing Dependencies
+
+The first step is to install the dependencies via the following script:
+
+```
+sudo bash scripts/install_dependencies.sh
+```
+
+The project uses Nginx 1.14.2 and depends on [Nginx RTMP module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git) for 
+
+## References
