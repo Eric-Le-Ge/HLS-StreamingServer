@@ -90,6 +90,13 @@ sudo certbot --nginx
 
 If you are prompted to choose whether or not to redirect HTTP traffic to HTTPS, you can choose `1: No redirect` to keep the http link or `2: Redirect` to enable only https.
 
+Optionally, remove the nginx installation used by certbot:
+
+```
+sudo bash scripts/remove_nginx.sh 
+```
+
+
 ## TroubleShooting
 
 ### nginx: bind() failed (Address already in use)
