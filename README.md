@@ -106,6 +106,15 @@ Optionally, remove the nginx installation used by certbot:
 sudo bash scripts/remove_nginx.sh 
 ```
 
+Now, go to `assets/index1.html` and replace `YOUR_DOMAIN_NAME` with the domain name you used for certification. Perform the same action for `assets/nginx1.conf`.
+
+Finally, install these two files with the following script:
+
+```
+sudo bash scripts/install_files_tls.sh 
+```
+
+And your server will be ready to accept https connections.
 
 ## TroubleShooting
 
