@@ -72,6 +72,16 @@ You may also play your video with an HLS player like [VLC](https://www.videolan.
 http://YOUR_SERVER_IP/hls/stream.m3u8
 ```
 
+Now, go to `assets/index1.html` and change `YOUR_DOMAIN_NAME` to the domain name that you have certified. Perform the same action for `assets/nginx1.conf`.
+
+Finally, install these two files with:
+
+```
+sudo bash scripts/install_files_tls.sh
+```
+
+And your server will be ready for https connections.
+
 ## Extension
 
 ### Enabling Https Connections
