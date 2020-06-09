@@ -27,19 +27,51 @@ sudo bash scripts/install_dependencies.sh
 
 The project uses Nginx 1.14.2 and depends on [Nginx RTMP module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git) for push streams. If you wish to use a newer version of Nginx or the current version is no longer supported, you can modify the version number in the installation script [here](https://github.com/Eric-Le-Ge/HLS-StreamingServer/blob/44eafc505976fe69ab7d6fce457a04870489d97c/scripts/install_dependencies.sh#L7)
 
-### Installing Nginx Configuration (http only)
+### Installing Nginx Configuration and Video Player (http only)
 
-In progress
+The following script would place the server configuration and webpage index in the appropraite directories:
 
-### Installing Video Player (http only)
+```
+sudo bash scripts/install_files.sh
+```
 
-In progress
+### Launching the Server
+
+To launch the server, run this nginx command:
+
+```
+sudo /usr/local/nginx/sbin/nginx
+```
+
+To stop the server, run this nginx command:
+
+```
+sudo /usr/local/nginx/sbin/nginx -s stop
+```
+
+You may find other nginx commands in the guide in the [References](#References) section.
+If you have any problems with the above commands, see [TroubleShooting](#TroubleShooting).
 
 ## Extension
 
 ### Enabling Https Connections
 
 In progress
+
+## TroubleShooting
+
+### nginx: bind() failed (Address already in use)
+This error might show up if some other application is taking the defualt port 80 or 443, or if you ran the launch server comand multiple times. To inspect which application is using which port, run:
+
+```
+sudo lsof -i -P -n | grep LISTEN
+```
+
+To free up the port (i.e. port 80), run:
+
+```
+sudo fuser -k 80/tcp
+```
 
 ## References
 
