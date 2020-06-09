@@ -52,6 +52,26 @@ sudo /usr/local/nginx/sbin/nginx -s stop
 You may find other nginx commands in the guide in the [References](#References) section.
 If you have any problems with the above commands, see [TroubleShooting](#TroubleShooting).
 
+### Using the Server
+
+To push a video stream to your server, you can use any streaming software like [OBS](https://obsproject.com/) and stream to the following address with the stream key `stream`, where `YOUR_SERVER_IP` is the ip address of your server:
+
+```
+rtmp://YOUR_SERVER_IP/show/stream
+```
+
+The video will be viewable at:
+
+```
+http://YOUR_SERVER_IP/
+```
+
+You may also play your video with an HLS player like [VLC](https://www.videolan.org/vlc/index.html) with this address:
+
+```
+http://YOUR_SERVER_IP/hls/stream.m3u8
+```
+
 ## Extension
 
 ### Enabling Https Connections
