@@ -76,7 +76,19 @@ http://YOUR_SERVER_IP/hls/stream.m3u8
 
 ### Enabling Https Connections
 
-In progress
+Before you enable https connections, you would need to own a domain name which points to your server's ip address. Once you have this step done, you can proceed to generate an SSL certificate with certbot. First, install the required dependencies with the folowing script:
+
+```
+sudo bash scripts/install_dependencies_tls.sh
+```
+
+Then, run the following command to obtain your certificate:
+
+```
+sudo certbot --nginx
+```
+
+If you are prompted to choose whether or not to redirect HTTP traffic to HTTPS, you can choose `1: No redirect` to keep the http link or `2: Redirect` to enable only https.
 
 ## TroubleShooting
 
