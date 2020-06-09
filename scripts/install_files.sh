@@ -6,7 +6,7 @@ chown -R www-data:www-data /nginx
 cp assets/index.html /nginx/index.html
 # place server ip address in video player
 IP=$(curl https://ifconfig.me)
-sed -i 's/YOUR_SERVER_IP/${IP}/g' /nginx/index.html
+sed -i "s/YOUR_SERVER_IP/${IP}/g" /nginx/index.html
 # replace nginx conf with new conf
 mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.old
 cp assets/nginx.conf /usr/local/nginx/conf/nginx.conf
