@@ -132,7 +132,7 @@ sudo fuser -k 80/tcp
 ```
 
 ### SSL Certification Process Timeout / Connection Refused
-If you are using an AWS ec2 instance, you might need to edit your firewall settings. 
+If you are using an AWS EC2 instance, you might need to edit your firewall settings. 
 
 Goto Your EC2 Instance -> Security Group -> Actions -> Edit Inbound Rules. Add custom TCP rules for port 1935 (rtmp), 80 and 443. Set the source to be `Anywhere`.
 
