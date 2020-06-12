@@ -57,7 +57,7 @@ If you have any problems with the above commands, see [TroubleShooting](#Trouble
 To push a video stream to your server, you can use any streaming software like [OBS](https://obsproject.com/) and stream to the following address with the stream key `stream`, where `YOUR_SERVER_IP` is the ip address of your server:
 
 ```
-rtmp://YOUR_SERVER_IP/show/stream
+rtmp://YOUR_SERVER_IP/show
 ```
 
 The video will be viewable at:
@@ -130,6 +130,11 @@ To free up the port (i.e. port 80), run:
 ```
 sudo fuser -k 80/tcp
 ```
+
+### SSL Certification Process Timeout / Connection Refused
+If you are using an AWS ec2 instance, you might need to edit your firewall settings. 
+
+Goto Your EC2 Instance -> Security Group -> Actions -> Edit Inbound Rules. Add custom TCP rules for port 1935 (rtmp), 80 and 443. Set the source to be `Anywhere`.
 
 ## References
 
